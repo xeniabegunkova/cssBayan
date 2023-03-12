@@ -1,0 +1,169 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    background: #ffffe0;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    max-width: 1920px;
+    min-width: 320px;
+    box-sizing: border-box;
+    color: black;
+    margin: auto;
+    padding: 0;
+    text-align: left;
+}
+
+.header {
+    padding: 0;
+    margin: 0;
+    padding: 20px 35px;
+    border-bottom: 1px bisque solid;
+}
+
+.header__title {
+    margin: 0;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.accordion {
+    padding: 0 50px;
+}
+
+.accordion__head {
+    margin: 0;
+    padding: 0;
+}
+
+.accordion__name {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 0.8em 0;
+    font-size: 1.0em;
+}
+
+.accordion__img {
+    width: 10px;
+    height: 15px;
+    opacity: 1;
+}
+
+.accordion__image {
+    width: 350px;
+    height: 350px;
+}
+
+.accordion__open {
+    display: none;
+}
+
+.accorion__tab {
+    width: 100%;
+    overflow: hidden;
+}
+
+.accordion__input {
+    appearance: none;
+    position: absolute;
+    right: 220px;
+}
+
+.accordion__input:checked~.accordion__name .accordion__img {
+    transform: rotate(180deg);
+}
+
+.accordion__input:checked~.accordion__open {
+    display: flex;
+    justify-content: center;
+}
+
+.accordion__input:hover~.accordion__open {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1920px) {
+    .header__title {
+        margin-bottom: 10px;
+        font-size: 2.5em;
+    }
+
+    .accordion__name {
+        padding: 1.2em 0;
+        font-size: 1.5em;
+    }
+
+    .accordion__name {
+        cursor: pointer;
+    }
+
+    .accordion__image {
+        width: 400px;
+        height: 400px;
+    }
+
+    .accordion__open {
+        cursor: pointer;
+    }
+
+    .accordion__img {
+        opacity: 0;
+    }
+
+    .accordion__input:hover~.accordion__open {
+        display: flex;
+        justify-content: center;
+        animation-name: pullDown;
+        animation-duration: .3s;
+        animation-timing-function: ease-in-out;
+        transform-origin: 50% 0%;
+    }
+    
+    @keyframes pullDown {
+        0% {
+            transform: scaleY(0.1);
+        }
+    
+        40% {
+            transform: scaleY(1.02);
+        }
+    
+        60% {
+            transform: scaleY(0.98);
+        }
+    
+        80% {
+            transform: scaleY(1.01);
+        }
+    
+        100% {
+            transform: scaleY(0.98);
+        }
+    
+        80% {
+            transform: scaleY(1.01);
+        }
+    
+        100% {
+            transform: scaleY(1);
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+    .header__title {
+        margin-bottom: 10px;
+        font-size: 2.3em;
+    }
+
+    .accordion__name {
+        padding: 1.2em 0;
+        font-size: 1.2em;
+    }
+}
