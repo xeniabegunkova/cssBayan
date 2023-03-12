@@ -88,6 +88,8 @@
     justify-content: center;
 }
 
+
+
 @media screen and (min-width: 1000px) and (max-width: 1920px) {
     .header__title {
         margin-bottom: 10px;
@@ -116,40 +118,50 @@
         opacity: 0;
     }
 
+    .accordion:hover .accordion__img {
+        opacity: 1;
+        transform: rotate(180deg);
+        transition: .8s;
+    }
+
+    .accordion:hover .accordion__name {
+        color: darkblue;
+    }
+
     .accordion__input:hover~.accordion__open {
         display: flex;
         justify-content: center;
         animation-name: pullDown;
-        animation-duration: .3s;
+        animation-duration: .8s;
         animation-timing-function: ease-in-out;
         transform-origin: 50% 0%;
     }
-    
+
     @keyframes pullDown {
         0% {
             transform: scaleY(0.1);
         }
-    
+
         40% {
             transform: scaleY(1.02);
         }
-    
+
         60% {
             transform: scaleY(0.98);
         }
-    
+
         80% {
             transform: scaleY(1.01);
         }
-    
+
         100% {
             transform: scaleY(0.98);
         }
-    
+
         80% {
             transform: scaleY(1.01);
         }
-    
+
         100% {
             transform: scaleY(1);
         }
