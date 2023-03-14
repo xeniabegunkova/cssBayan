@@ -41,8 +41,8 @@
 }
 
 .accordion__img {
-    width: 1.5rem;
-    height: 2rem;
+    width: 0.5rem;
+    height: 1.0rem;
     opacity: 1;
 }
 
@@ -116,7 +116,7 @@
 
 @media screen and (min-width: 1023px) {
     .accordion {
-        margin: 0 25%;
+        margin: auto 30%;
     }
 
     .header__title {
@@ -125,8 +125,8 @@
     }
 
     .accordion__name {
-        padding: 1.2em 0;
-        font-size: 1.5em;
+
+        font-size: 1.0em;
     }
 
     .accordion__name {
@@ -134,8 +134,8 @@
     }
 
     .accordion__image {
-        width: 35rem;
-        height: 35rem;
+        width: 15rem;
+        height: 15rem;
         transition: all 0.7s ease-in-out;;
     }
 
