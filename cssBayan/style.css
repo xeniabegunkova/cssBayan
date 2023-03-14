@@ -1,0 +1,298 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    background: #ffffe0;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    max-width: 1920px;
+    min-width: 320px;
+    box-sizing: border-box;
+    color: black;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+}
+
+.header {
+    padding: 0;
+    margin: 0;
+    padding: 1.25rem 2.1875rem;
+    border-bottom: 1px bisque solid;
+}
+
+.header__title {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.accordion__head {
+    margin: 0;
+    padding: 0;
+}
+
+.accordion__name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordion__img {
+    width: 0.5rem;
+    height: 1.0rem;
+    opacity: 1;
+}
+
+.accordion__open {
+    display: none;
+}
+
+.accorion__tab {
+    width: 100%;
+    overflow: hidden;
+}
+
+.accordion__input {
+    appearance: none;
+}
+
+.accordion__input:checked~.accordion__open {
+    display: flex;
+    justify-content: center;
+}
+
+.accordion__input:hover~.accordion__open {
+    display: flex;
+    justify-content: center;
+}
+
+#input1:checked~.accordion__name .accordion__img {
+    transform: rotate(180deg);
+    transition: .9s;
+}
+
+#input2:checked~.accordion__name .accordion__img {
+    transform: rotate(180deg);
+    transition: .9s;
+}
+
+#input3:checked~.accordion__name .accordion__img {
+    transform: rotate(180deg);
+    transition: .9s;
+}
+
+#input4:checked~.accordion__name .accordion__img {
+    transform: rotate(180deg);
+    transition: .9s;
+}
+
+#input5:checked~.accordion__name .accordion__img {
+    transform: rotate(180deg);
+    transition: .9s;
+}
+
+#input1:checked~.accordion__name {
+    color: darkgoldenrod;
+}
+
+#input2:checked~.accordion__name {
+    color: darkgoldenrod;
+}
+
+#input3:checked~.accordion__name {
+    color: darkgoldenrod;
+}
+
+#input4:checked~.accordion__name {
+    color: darkgoldenrod;
+}
+
+#input5:checked~.accordion__name {
+    color: darkgoldenrod;
+}
+
+@media screen and (min-width: 1023px) {
+    .accordion {
+        margin: auto 30%;
+    }
+
+    .header__title {
+        margin-bottom: 0.625rem;
+        font-size: 2.5em;
+    }
+
+    .accordion__name {
+
+        font-size: 1.0em;
+    }
+
+    .accordion__name {
+        cursor: pointer;
+    }
+
+    .accordion__image {
+        width: 15rem;
+        height: 15rem;
+        transition: all 0.7s ease-in-out;;
+    }
+
+    .accordion__image:active{
+        transform: scale(1.2);
+        transition: 1s;
+    }
+
+    .accordion__open {
+        cursor: pointer;
+    }
+
+    .accordion__img {
+        opacity: 0;
+    }
+
+    .accordion:hover .accordion__img {
+        opacity: 1;
+    }
+
+    .accordion__name:hover {
+        color: goldenrod;
+    }
+
+    .accordion__name-one:hover .accordion__img {
+        transform: rotate(180deg);
+        transition: .9s;
+    }
+
+    .accordion__name-two:hover .accordion__img {
+        transform: rotate(180deg);
+        transition: .9s;
+    }
+
+    .accordion__name-three:hover .accordion__img {
+        transform: rotate(180deg);
+        transition: .9s;
+    }
+
+    .accordion__name-four:hover .accordion__img {
+        transform: rotate(180deg);
+        transition: .9s;
+    }
+
+    .accordion__name-five:hover .accordion__img {
+        transform: rotate(180deg);
+        transition: .9s;
+    }
+
+    #input1:checked~.accordion__name {
+        color: darkgoldenrod;
+    }
+
+    #input2:checked~.accordion__name {
+        color: darkgoldenrod;
+    }
+
+    #input3:checked~.accordion__name {
+        color: darkgoldenrod;
+    }
+
+    #input4:checked~.accordion__name {
+        color: darkgoldenrod;
+    }
+
+    #input5:checked~.accordion__name {
+        color: darkgoldenrod;
+    }
+
+    .accordion__input:hover~.accordion__open {
+        display: flex;
+        justify-content: center;
+        animation-name: pullDown;
+        animation-duration: .5s;
+        animation-timing-function: ease-in-out;
+        transform-origin: 50% 0%;
+    }
+
+    @keyframes pullDown {
+        0% {
+            transform: scaleY(0.1);
+        }
+
+        40% {
+            transform: scaleY(1.02);
+        }
+
+        60% {
+            transform: scaleY(0.98);
+        }
+
+        80% {
+            transform: scaleY(1.01);
+        }
+
+        100% {
+            transform: scaleY(0.98);
+        }
+
+        80% {
+            transform: scaleY(1.01);
+        }
+
+        100% {
+            transform: scaleY(1);
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .header__title {
+        margin-bottom: 0.2rem;
+        font-size: 2.3em;
+    }
+
+    .accordion__name {
+        padding: 1.2em 0;
+        font-size: 1.5em;
+    }
+
+    .accordion {
+        padding: 0 15%;
+    }
+
+    .accordion__image {
+        width: 22rem;
+        height: 22rem;
+    }
+
+    .accordion__img {
+        width: 1rem;
+        height: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header__title {
+        margin-bottom: 0.5rem;
+        font-size: 2em;
+    }
+
+    .accordion__name {
+        padding: 1.0em 0;
+        font-size: 1em;
+    }
+
+    .accordion {
+        margin: 0 auto;
+    }
+
+    .accordion__image {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    .accordion__img {
+        width: 0.7rem;
+        height: 1rem;
+    }
+}
